@@ -10,6 +10,7 @@ function openSignup() {
     glavni.style.paddingRight = "17px"; // ostane ista pozicija, kadar izgine overflow, overflow width=17px
 }
 function closeSignup() {
+    signUp.classList.add("transS");
     animationS.classList.remove("showS");
     animationS.classList.add("hideS");
     setTimeout(() => {

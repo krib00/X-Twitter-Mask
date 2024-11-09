@@ -1,3 +1,99 @@
+.loginFunction { /* POP-UP LOGIN - START */
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(91, 112, 131, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+.glavniL { 
+    border: none;
+    height:650px;
+    min-height:400px;
+    min-width:600px;    
+    max-height:90vh;
+    max-width:80vw;
+    flex-shrink:1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius:16px;
+    background-color: black;
+}
+.glavaL{
+    height:53px;
+    width:100%;
+    display:flex;
+    padding-left:16px;
+    padding-right:16px;
+    align-items: center;
+}
+.glavaL button{
+    min-width: 36px;
+    height:36px;
+    border:none;
+    background-color: black;
+    transition-duration: 0.2s;  
+    border-radius:9999px;
+    display:flex;      
+    margin-left: calc(-8px); 
+    align-items: center;
+}
+.glavaL button:hover{
+    cursor:pointer;
+    transition-duration: 0.2s;  
+    background-color: rgba(239, 243, 244, 0.1);
+}
+.glavaL button svg {
+    fill:rgb(239, 243, 244);
+    height:20px;
+    width:20px; 
+    margin-left: calc(8px); 
+}
+.maliL{
+    height:100%;
+    min-width: 32px;
+    align-items: center;
+    justify-content: center;
+    display:flex;  
+}
+.maliL svg{
+    fill:rgba(231, 233, 234, 1.00);
+    max-width: 100%;
+}
+.barrierL_L{
+    flex-basis:50%;
+    display:flex;
+    align-items: center;
+}
+.barrierL_D{
+    flex-basis:50%;
+    display:flex;
+    align-items: flex-end;
+    align-self:stretch;
+    justify-content: center;
+}
+.teloL{
+    padding-bottom: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display:flex;
+    justify-content: center;
+}
+.teloL h1{
+    margin-top:20px;
+    margin-bottom:20px;    
+    width:300px;
+    color: rgb(231, 233, 234);
+    line-height: 36px;
+    word-wrap: break-word;
+    font-family: ChirpBold;
+    font-weight: 700;
+    font-size:31px;
+    letter-spacing:0;
+}
 .glavniL{
     display:flex;
     flex-direction: column;
