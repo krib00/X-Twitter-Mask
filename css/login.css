@@ -1,13 +1,14 @@
-.loginFunction { /* POP-UP LOGIN - START */
+.loginFunction {
     position: fixed;
     top: 0; 
     left: 0;
     display: none;
     width: 100%; 
     height: 100%; 
-    background-color: rgba(91, 112, 131, 0.4);
+    background-color: rgba(63, 98, 116, 0.4);
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease; 
 }
 .glavniL { 
     border: none;
@@ -21,6 +22,35 @@
     overflow-y: hidden;
     border-radius:16px;
     background-color: black;
+}
+.showL{
+    animation: loginShow 0.5s ease;
+}
+.hideL{
+    animation: loginHide 0.3s ease;
+}
+@keyframes loginShow {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes loginHide {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
 .glavaL{
     height:53px;
