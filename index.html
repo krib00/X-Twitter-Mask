@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>X Replika</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="glavni">
+        <div class="glava">
+            <div class="levo">
+                <div class="slika">
+                    <svg class="velikX" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="desno">
+                <div class="meni">
+                    <svg class="maliX" viewBox="0 0 24 24" aria-hidden="true">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                    <h1>Happening now</h1>
+                    <h2>Join today.</h2>
+                    <button class="google">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <g>
+                                <path
+                                    d="M18.977 4.322L16 7.3c-1.023-.838-2.326-1.35-3.768-1.35-2.69 0-4.95 1.73-5.74 4.152l-3.44-2.635c1.656-3.387 5.134-5.705 9.18-5.705 2.605 0 4.93.977 6.745 2.56z"
+                                    fill="#EA4335"></path>
+                                <path
+                                    d="M6.186 12c0 .66.102 1.293.307 1.89L3.05 16.533C2.38 15.17 2 13.63 2 12s.38-3.173 1.05-4.533l3.443 2.635c-.204.595-.307 1.238-.307 1.898z"
+                                    fill="#FBBC05"></path>
+                                <path
+                                    d="M18.893 19.688c-1.786 1.667-4.168 2.55-6.66 2.55-4.048 0-7.526-2.317-9.18-5.705l3.44-2.635c.79 2.42 3.05 4.152 5.74 4.152 1.32 0 2.474-.308 3.395-.895l3.265 2.533z"
+                                    fill="#34A853"></path>
+                                <path
+                                    d="M22 12c0 3.34-1.22 5.948-3.107 7.688l-3.265-2.53c1.07-.67 1.814-1.713 2.093-3.063h-5.488V10.14h9.535c.14.603.233 1.255.233 1.86z"
+                                    fill="#4285F4"></path>
+                            </g>
+                        </svg>
+                        <span>Sign up with Google</span>
+                    </button>
+                    <button class="apple">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <g>
+                                <path
+                                    d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span>Sign up with Apple</span>
+                    </button>
+                    <div class="orBlock">
+                        <div class="levaCrta"></div>
+                        <span>or</span>
+                        <div class="desnaCrta"></div>
+                    </div>
+                    <button class="create" onclick="openSignup()">
+                        <span>Create account</span>
+                    </button>
+                    <p class="terms">By signing up, you agree to the <a href=https://x.com/sl/tos target="_blank"> Terms
+                            of Service</a> and <a href=https://x.com/sl/privacy target="_blank"> Privacy Policy</a>,
+                        including<a href=https://help.x.com/en/rules-and-policies/x-cookies target="_blank"> Cookie
+                            Use.</a></p>
+                    <div class="skatlaRacun">
+                        <span>Already have an account?</span>
+                        <button class="signin" onclick="openLogin()">
+                            <span>Sign in</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="noga">
+            <nav aria-label="Footer">
+                <a href="https://about.x.com" target="_blank">
+                    <span>About</span>
+                </a>
+                <a href="https://help.x.com/using-x/download-the-x-app" target="_blank">
+                    <span>Download the X app</span>
+                </a>
+                <a href="https://help.x.com" target="_blank">
+                    <span>Help Center</span>
+                </a>
+                <a href="https://x.com/tos" target="_blank">
+                    <span>Terms of Service</span>
+                </a>
+                <a href="https://x.com/privacy" target="_blank">
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="https://support.x.com/articles/20170514" target="_blank">
+                    <span>Cookie Policy</span>
+                </a>
+                <a href="https://help.x.com/resources/accessibility" target="_blank">
+                    <span>Accessibility</span>
+                </a>
+                <a href="https://business.x.com/en/help/troubleshooting/how-x-ads-work" target="_blank">
+                    <span>Ads info</span>
+                </a>
+                <a href="https://blog.x.com" target="_blank">
+                    <span>Blog</span>
+                </a>
+                <a href="https://careers.x.com" target="_blank">
+                    <span>Careers</span>
+                </a>
+                <a href="https://about.x.com/press/brand-assets" target="_blank">
+                    <span>Brand Resources</span>
+                </a>
+                <a href="https://ads.x.com/?ref=gl-tw-tw-twitter-advertise" target="_blank">
+                    <span>Advertising</span>
+                </a>
+                <a href="https://marketing.x.com" target="_blank">
+                    <span>Marketing</span>
+                </a>
+                <a href="https://business.x.com/en?ref=web-twc-ao-gbl-twitterforbusiness&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=twitterforbusiness"
+                    target="_blank">
+                    <span>X for Business</span>
+                </a>
+                <a href="https://developer.x.com" target="_blank">
+                    <span>Developers</span>
+                </a>
+                <a href="https://x.com/i/directory/profiles" target="_blank">
+                    <span>Directory</span>
+                </a>
+                <a href="/settings">
+                    <span>Settings</span>
+                </a>
+                <div>
+                    <span>© 2024 X Corp.</span>
+                </div>
+            </nav>
+        </div>
+        <div class="signupFunction"> <!-- POPUP OKNO REGISTRACIJA -->
+            <div class="glavniS">
+                <div class="glavaS">
+                    <div class="barrierS_L">
+                        <button onclick="closeSignup()">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path
+                                        d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="maliS">
+                        <svg viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="barrierS_D"></div>
+                </div>
+                <div class="teloS">
+                    <h1>Create your account</h1>
+                    <div class="nameS" onclick="activeNameS(this)">
+                        <div class="nameholderS">
+                            <span class="spanNameS">Name</span>
+                        </div>
+                        <div class="inputholderS">
+                            <input id="inputName" type="text" required>
+                        </div>
+                    </div>
+                    <div class="emailS" onclick="activeEmailS(this)">
+                        <div class="emailHolderS">
+                            <span class="spanEmailS">Email</span>
+                        </div>
+                        <div class="inputholderEmailS">
+                            <input id="inputEmail" type="text" required>
+                        </div>
+                        <div class="errorMsg">
+                            <span>Please enter a valid email.</span>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <span class="spanPrvi">Date of birth</span>
+                        <span class="spanDrugi">This will not be shown publicly. Confirm your own age, even if this
+                            account is for a business, a pet, or something else.</span>
+                        <div class="comboBoxes">
+                            <div class="mesec">
+                                <span class="mesecSpan">Month</span>
+                                <select id="month">
+                                    <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
+                                    <script>
+                                        const months = [
+                                            "January", "February", "March", "April", "May", "June",
+                                            "July", "August", "September", "October", "November", "December"
+                                        ];
+                                        months.forEach((month, index) => {
+                                            document.write(`<option value="${index + 1}">${month}</option>`);
+                                        });
+                                    </script>
+                                </select>
+                                <svg class="mesecSvg" viewBox="0 0 24 24">
+                                    <g>
+                                        <path
+                                            d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="dan">
+                                <span class="danSpan">Day</span>
+                                <select id="day">
+                                    <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
+                                    <script>
+                                        for (let i = 1; i <= 31; i++) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                                <svg class="danSvg" viewBox="0 0 24 24">
+                                    <g>
+                                        <path
+                                            d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="leto">
+                                <span class="letoSpan">Year</span>
+                                
+                                <select id="year">
+                                    <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
+                                    <script>
+                                        const currentYear = new Date().getFullYear();
+                                        for (let i = currentYear; i >= 1904; i--) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                                <svg class="letoSvg" viewBox="0 0 24 24">
+                                    <g>
+                                        <path
+                                            d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nogaS">
+                    <button id="nextBtn" disabled>
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="loginFunction"> <!-- POPUP OKNO LOGIN -->
+            <div class="glavniL">
+                <div class="glavaL">
+                    <div class="barrierL_L">
+                        <button onclick="closeLogin()">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path
+                                        d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="maliL">
+                        <svg viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="barrierL_D"></div>
+                </div>
+                <div class="teloL">
+                    <h1>Sign in to X</h1>
+                    <button class="googleLogin">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <g>
+                                <path
+                                    d="M18.977 4.322L16 7.3c-1.023-.838-2.326-1.35-3.768-1.35-2.69 0-4.95 1.73-5.74 4.152l-3.44-2.635c1.656-3.387 5.134-5.705 9.18-5.705 2.605 0 4.93.977 6.745 2.56z"
+                                    fill="#EA4335"></path>
+                                <path
+                                    d="M6.186 12c0 .66.102 1.293.307 1.89L3.05 16.533C2.38 15.17 2 13.63 2 12s.38-3.173 1.05-4.533l3.443 2.635c-.204.595-.307 1.238-.307 1.898z"
+                                    fill="#FBBC05"></path>
+                                <path
+                                    d="M18.893 19.688c-1.786 1.667-4.168 2.55-6.66 2.55-4.048 0-7.526-2.317-9.18-5.705l3.44-2.635c.79 2.42 3.05 4.152 5.74 4.152 1.32 0 2.474-.308 3.395-.895l3.265 2.533z"
+                                    fill="#34A853"></path>
+                                <path
+                                    d="M22 12c0 3.34-1.22 5.948-3.107 7.688l-3.265-2.53c1.07-.67 1.814-1.713 2.093-3.063h-5.488V10.14h9.535c.14.603.233 1.255.233 1.86z"
+                                    fill="#4285F4"></path>
+                            </g>
+                        </svg>
+                        <span>Sign in with Google</span>
+                    </button>
+                    <button class="appleLogin">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <g>
+                                <path
+                                    d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span>Sign in with Apple</span>
+                    </button>
+                    <div class="orBlockLogin">
+                        <div class="levaCrtaLogin"></div>
+                        <span>or</span>
+                        <div class="desnaCrtaLogin"></div>
+                    </div>
+                    <div class="nameL" onclick="loginInputL(this)">
+                        <div class="nameholderS">
+                            <span class="spanNameL">Phone, email, or username</span>
+                        </div>
+                        <div class="inputholderL">
+                            <input id="inputNameL" type="text" required>
+                        </div>
+                    </div>
+                    <button class="nextBtnL" onclick="successLogin()" disabled>
+                        <span>Next</span>
+                    </button>
+                    <button class="passL">
+                        <span>Forgot password?</span>
+                    </button>
+                    <div class="bottomTxt">
+                        <span>Don't have an account?</span>
+                        <button onclick="dontHaveAnAccount()">
+                            <span>Sign up</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVA-SCRIPT povezave -->
+    <script src="js/main-zoom.js"></script>
+    <script src="js/main-openClose.js"></script>
+    <script src="js/signUp-input.js"></script>
+    <script src="js/signUp-reset.js"></script>
+    <script src="js/signUp-enableBtn.js"></script>
+    <script src="js/signUp-sweet.js"></script>
+    <script src="js/signUp-checkbox.js"></script>
+    <script src="js/login-input.js"></script>
+    <script src="js/login-enableBtn.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+
+</body>
+</html>

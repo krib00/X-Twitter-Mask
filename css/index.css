@@ -1,0 +1,380 @@
+@font-face {
+    font-family: xfont;
+    src: url("..\\fonts\\xfont.woff2") format("woff2");
+}
+@font-face {
+    font-family: xfontMini;
+    src: url("..\\fonts\\xFontMini.woff2") format("woff2");
+}
+@font-face{
+    font-family: chirpRegular;
+    src: url("..\\fonts\\chirpRegular.woff2") format("woff2");
+}
+@font-face{
+    font-family:ChirpBold;
+    src: url("..\\fonts\\ChirpBold.woff2") format("woff2");
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body, .glavni{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:black;
+    color:white;
+    height:100%;
+    width:100%;
+}
+.glavni{
+    align-items:stretch;
+    overflow: auto scroll;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    color-scheme: dark;
+    display:flex;
+    flex-direction: column;
+}
+.glava{
+    display:flex;
+    justify-content: center;
+    min-height: auto;
+    flex: 1 1 auto;
+}
+.glavaMod{
+    width:600px;
+    margin:auto;
+}
+.levo{
+    min-height:45vh;
+    flex:1;
+    display:flex;
+    flex-direction: column;
+}
+.levo .slika{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    flex:1;
+}
+.velikX{
+    fill: currentColor;
+    max-height:380px;
+    height:50%;
+    vertical-align:text-bottom;
+    max-width:100%;
+    color: rgba(231, 233, 234);
+    display:inline-block;
+    justify-content: center;
+    margin:32px;
+}
+.desno{
+    min-width:45vw;
+    padding:16px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.meni{
+    min-width:437px;
+    max-width:760px;
+    padding:20px;
+    width:100%; 
+    display:flex;
+    flex-direction: column;
+}
+.maliX{
+    height:3.5625rem;
+    padding-bottom:12px;
+    align-self:flex-start;
+    fill:currentColor;
+    color: rgba(231, 233, 234, 1.00);
+}
+h1{
+    font-family: xFont;
+    line-height: 84px;
+    letter-spacing: -1.2px;
+    font-size: 64px;
+    font-weight: 700;
+    min-width: 0;
+    margin-bottom:48px;
+    margin-top:48px;
+    color:#e7e9ea;
+    word-wrap:break-word;
+    width:auto;
+}
+h2{
+    font-family:xFont;
+    color:#e7e9ea;
+    font-size:31px;
+    margin-bottom:32px;
+    font-weight:700;
+    line-height:36px;
+    min-width: 0;
+}
+.google, .apple, .create, .signin{
+    height:40px;
+    width:300px;
+    max-width:380px;
+    border:1px solid;
+    line-height: 20px;
+    border-radius: 9999px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    font-size:15px;
+    font-weight: 700;
+}
+.google{
+    margin-bottom:8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:15px;
+    font-family: ChirpBold;
+}
+.google svg{
+    height:20px;
+    margin-right:4px;
+    max-width: 100%;
+}
+.google, .apple{
+    background-color: rgb(255,255,255);
+    color:black;
+}
+.google:hover{
+    background-color:rgb(230,230,230);
+}
+.apple:hover{
+    background-color:rgb(230,230,230);
+}
+.apple{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ChirpBold;
+}
+.apple svg{
+    margin-right: 4px;
+    height:20px;
+}
+.create:hover{
+    background-color: rgb(26,140,216);
+}
+.signin:hover{
+    background-color: rgb(3,16,24)
+}
+.orBlock{
+    height:20px;
+    max-width:380px;
+    margin:8px -4px 8px -4px;
+    display:flex;
+    align-items: center;
+}
+.orBlock span{
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    margin:auto 4px auto 4px;
+    color: rgb(231, 233, 234);
+    font-family: chirpRegular;
+}
+.levaCrta, .desnaCrta{
+    background-color: rgb(47, 51, 54);
+    height:1px;
+    width:135px;
+    margin-left:4px;
+    margin-right:4px;
+}
+.create{
+    background-color: rgb(29, 155, 240);
+    color:white;
+    margin-bottom:8px;
+    border:none;
+    font-family: ChirpBold;
+}
+.terms{
+    font-size:11px;
+    font-weight: 400;
+    line-height:12px;
+    color: rgb(113, 118, 123);
+    margin-bottom:20px;
+    width:300px;
+    font-family: xFontMini;
+}
+.terms a{
+    text-decoration: none;
+    color: rgb(29, 155, 240);
+}
+.terms a:hover{
+    text-decoration: underline;
+}
+.skatlaRacun{
+    margin-top:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skatlaRacun span{
+    max-width:380px;
+    line-height:20px;
+    font-weight: 700;
+    font-size:17px;
+    margin-bottom:20px;
+    color: rgb(231, 233, 234);
+    font-family: ChirpBold;
+}
+.signin{
+    background-color: black;
+    margin-bottom:8px;
+    font-family: xFontMini;
+    line-height: 20px;
+    border-color: rgb(83, 100, 113);
+}
+.signin span{
+    font-size:15px;
+    color: rgb(29, 155, 240);
+}
+.noga{ 
+    margin-bottom:0;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+.noga nav{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: center;
+    padding-bottom:12px;
+    padding-top:12px;
+    padding-left:16px;
+    padding-right:16px;
+}
+.noga nav a{
+    font-family: chirpRegular;
+    word-wrap:break-word;
+    font-size:13px;
+    min-width:0;
+    line-height: 16px;
+    font-weight:400;
+    padding-right:16px;
+    margin-bottom:4px;
+    margin-top:4px;
+    text-decoration: none;
+    color: rgb(113, 118, 123);
+}
+.noga nav a:hover {
+    text-decoration: underline;
+}
+.noga nav div{
+    font-family: chirpRegular;
+    word-wrap:break-word;
+    font-size:13px;
+    line-height: 16px;
+    font-weight:400;
+    padding-right:16px;
+    margin-bottom:4px;
+    margin-top:4px;
+    color: rgb(113, 118, 123);
+}
+.odzadje{
+    background-color: rgba(91, 112, 131, 0.4);
+    height:100%;
+    width:100%;
+}
+.loginFunction { /* POP-UP LOGIN - START */
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(91, 112, 131, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+.glavniL { 
+    border: none;
+    height:650px;
+    min-height:400px;
+    min-width:600px;    
+    max-height:90vh;
+    max-width:80vw;
+    flex-shrink:1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius:16px;
+    background-color: black;
+}
+.glavaL{
+    height:53px;
+    width:100%;
+    display:flex;
+    padding-left:16px;
+    padding-right:16px;
+    align-items: center;
+}
+.glavaL button{
+    min-width: 36px;
+    height:36px;
+    border:none;
+    background-color: black;
+    transition-duration: 0.2s;  
+    border-radius:9999px;
+    display:flex;      
+    margin-left: calc(-8px); 
+    align-items: center;
+}
+.glavaL button:hover{
+    cursor:pointer;
+    transition-duration: 0.2s;  
+    background-color: rgba(239, 243, 244, 0.1);
+}
+.glavaL button svg {
+    fill:rgb(239, 243, 244);
+    height:20px;
+    width:20px; 
+    margin-left: calc(8px); 
+}
+.maliL{
+    height:100%;
+    min-width: 32px;
+    align-items: center;
+    justify-content: center;
+    display:flex;  
+}
+.maliL svg{
+    fill:rgba(231, 233, 234, 1.00);
+    max-width: 100%;
+}
+.barrierL_L{
+    flex-basis:50%;
+    display:flex;
+    align-items: center;
+}
+.barrierL_D{
+    flex-basis:50%;
+    display:flex;
+    align-items: flex-end;
+    align-self:stretch;
+    justify-content: center;
+}
+.teloL{
+    padding-bottom: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display:flex;
+    justify-content: center;
+}
+.teloL h1{
+    margin-top:20px;
+    margin-bottom:20px;    
+    width:300px;
+    color: rgb(231, 233, 234);
+    line-height: 36px;
+    word-wrap: break-word;
+    font-family: ChirpBold;
+    font-weight: 700;
+    font-size:31px;
+    letter-spacing:0;
+}

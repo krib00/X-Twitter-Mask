@@ -1,0 +1,438 @@
+.signupFunction { /* POP-UP SIGN UP - START */
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(91, 112, 131, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+.glavniS { 
+    border: none;
+    height:0;
+    width:0; 
+    min-width:600px;  
+    min-height:400px;
+    height:650px;  
+    max-height:90vh;
+    max-width:80vw;
+    flex-shrink:1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius:16px;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+}
+.showS{
+    animation: signUpShow 0.5s forwards;
+}
+.hideS{
+    animation: signUpHide 0.3s forwards;
+}
+@keyframes signUpShow {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes signUpHide {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.glavaS{
+    height:53px;
+    width:100%;
+    display:flex;
+    padding-left:16px;
+    padding-right:16px;
+    align-items: center;
+}
+.glavaS button{
+    min-width: 36px;
+    height:36px;
+    border:none;
+    background-color: black;
+    transition-duration: 0.2s;  
+    border-radius:9999px;
+    display:flex;      
+    margin-left: calc(-8px); 
+    align-items: center;
+}
+.glavaS button:hover{
+    cursor:pointer;
+    transition-duration: 0.2s;  
+    background-color: rgba(239, 243, 244, 0.1);
+}
+.glavaS button svg {
+    fill:rgb(239, 243, 244);
+    height:20px;
+    width:20px; 
+    margin-left: calc(8px); 
+}
+.maliS{
+    height:100%;
+    min-width: 32px;
+    align-items: center;
+    justify-content: center;
+    display:flex;  
+}
+.maliS svg{
+    fill:rgba(231, 233, 234, 1.00);
+    max-width: 100%;
+}
+.barrierS_L{
+    flex-basis:50%;
+    display:flex;
+    align-items: center;
+}
+.barrierS_D{
+    flex-basis:50%;
+    display:flex;
+    align-items: flex-end;
+    align-self:stretch;
+    justify-content: center;
+}
+.teloS{
+    padding-left:80px;
+    padding-right:80px;
+    max-width:600px;
+    display:flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+}
+.teloS h1{
+    margin-top:20px;
+    margin-bottom:20px;    
+    color: rgb(231, 233, 234);
+    line-height: 36px;
+    word-wrap: break-word;
+    font-family: ChirpBold;
+    font-weight: 700;
+    font-size:31px;
+    letter-spacing:0;
+}
+.nameS{  /* NAME - START */
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(51, 54, 57);
+    display:flex;
+}
+.nameSmod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.nameholderS{
+    position: absolute;
+    flex-direction: row;
+    display:flex;
+    height:100%;
+    width:100%;
+    user-select: none;
+}
+.spanNameS{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 16px;
+    font-family: chirpRegular;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(113, 118, 123);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanNameSmod{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(29, 155, 240);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanNameSmod2{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(113, 118, 123);
+    }
+.inputholderS{
+    position: relative;
+    margin-top:16px;
+    padding:12px 8px 8px 8px;
+    display:flex;
+    width:100%;
+}
+.inputholderS input{
+    border:none;
+    font-size:17px;
+    font-weight:400;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.00);
+    outline-style:none;
+    text-align: left;
+    font-family: ChirpRegular;
+    width:100%;
+    color: rgb(231, 233, 234);
+}  /* NAME - FINISH */
+.emailS{  /* EMAIL - START */
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(51, 54, 57);
+    display:flex;
+}
+.emailSmod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.emailHolderS{
+    position: absolute;
+    flex-direction: row;
+    display:flex;
+    height:100%;
+    width:100%;
+    user-select: none;
+}
+.spanEmailS{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 16px;
+    font-family: chirpRegular;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(113, 118, 123);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanEmailSmod{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(29, 155, 240);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanEmailSmod2{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(113, 118, 123);
+    }
+.inputholderEmailS{
+    position: relative;
+    margin-top:16px;
+    padding:12px 8px 8px 8px;
+    display:flex;
+    width:100%;
+}
+.inputholderEmailS input{
+    border:none;
+    font-size:17px;
+    font-weight:400;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.00);
+    outline-style:none;
+    text-align: left;
+    font-family: ChirpRegular;
+    width:100%;
+    color: rgb(231, 233, 234);
+}
+.errorMsg{
+    padding-left: 8px;
+    padding-right:8px;
+    margin-top:60px;
+    position: absolute;
+    display:none;
+}
+.errorMsg span{
+    color: rgb(244, 33, 46);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: chirpRegular;
+}
+.emailSInvalid{
+    border: 1px solid rgb(244, 33, 46) !important;
+    box-shadow: none !important;
+}
+.spanEmailSInvalid{
+    color: rgb(244, 33, 46) !important;
+}
+/* EMAIL - FINISH */
+.bottomCont{   /* SPODNJI DEL - DATE*/
+    display:flex;
+    margin-top:24px;
+    flex-direction: column;
+}
+.spanPrvi{
+    font-family: ChirpBold;
+    margin-bottom: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    font-size:15px;
+    color: rgb(231, 233, 234);
+}
+.spanDrugi{
+    font-family: chirpRegular;
+    margin-bottom:4px;
+    color: rgb(113, 118, 123);
+    line-height: 16px;
+    font-size:14px;
+    font-weight: 400;
+}
+.comboBoxes{
+    margin:16px 0 16px;
+    flex-direction: row;
+    display:flex;
+}
+.mesec, .dan, .leto{
+    border: 1px rgb(51, 54, 57) solid;
+    border-radius: 4px;
+    user-select:none;
+    position:relative;
+}
+.mesec, .dan{
+    margin-right: 12px;
+}
+.mesec{
+    flex-grow:2;    
+}
+.dan{
+    flex-grow: 1;
+}
+
+.leto{
+    flex-grow: 1;
+}
+.danMod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.mesecMod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.letoMod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.mesec span, .dan span, .leto span{
+    position:absolute;
+    padding: 8px 8px 0 8px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(113, 118, 123);
+    font-size: 13px;
+    font-family: chirpRegular;
+}
+.mesecSpanMod{
+    color: rgb(29, 155, 240) !important;
+}
+.danSpanMod{
+    color: rgb(29, 155, 240) !important;
+}
+.letoSpanMod{
+    color: rgb(29, 155, 240) !important;
+}
+.mesec select, .dan select, .leto select{
+    margin-top: 16px;
+    padding: 12px 8px 8px 8px;
+    line-height: 20px;
+    background-color: rgba(0, 0, 0, 0.00);    
+    color: rgba(231, 233, 234, 1.00);
+    cursor:pointer;
+    outline-style:none;
+    appearance: none;
+    font-size:17px;
+    border:none;
+    width:100%;
+    background-color: rgba(0, 0, 0, 1.00);
+    font-family: chirpRegular;
+}
+.mesec svg, .dan svg, .leto svg{
+    margin-top: -0.7em;    
+    height: 1.40rem;
+    color: rgb(113, 118, 123);
+    fill: currentcolor;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    pointer-events: none;
+    max-width: 100%;;
+}
+.mesecSvgMod{
+    color: rgb(29, 155, 240) !important;
+}
+.danSvgMod{
+    color: rgb(29, 155, 240) !important;
+}
+.letoSvgMod{
+    color: rgb(29, 155, 240) !important;
+}
+ /* DATE - FINISH */
+.nogaS{
+    padding: 0 80px 0 80px;
+    margin: 24px 0 24px;
+    user-select: none;
+    display:flex;
+    justify-content: center;
+}
+.nogaS button{
+    background-color: rgb(239, 243, 244);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 9999px;
+    min-height: 52px;    
+    min-width: 52px;
+    transition-duration: 0.2s;
+    flex-grow: 1;
+    cursor: pointer;
+}
+.nogaS button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.nogaS button span{
+    line-height: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    color: rgb(15, 20, 25);
+    font-family: ChirpBold;
+}
