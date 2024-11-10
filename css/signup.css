@@ -52,7 +52,7 @@
         opacity: 1;
     }
     100%{
-        transform: scale(1.2);
+        transform: scale(0);
         opacity: 0;
     }
 }
@@ -118,7 +118,6 @@
     overflow-x: hidden;
     flex-direction: column;
     flex-grow: 1;
-    overflow: auto;
 }
 .teloS h1{
     margin-top:20px;
@@ -134,7 +133,6 @@
 .nameS{  /* NAME - START */
     position: relative;
     margin-top: 12px;
-    margin-bottom: 12px;
     border-radius: 4px;
     border: 1px solid rgb(51, 54, 57);
     display:flex;
@@ -170,7 +168,7 @@
     font-size: small;
     font-weight: 400;
     line-height: 16px;
-    color: rgb(29, 155, 240);
+    color: rgb(29, 155, 240) !important;
     transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .spanNameSmod2{
@@ -201,11 +199,32 @@
     font-family: ChirpRegular;
     width:100%;
     color: rgb(231, 233, 234);
-}  /* NAME - FINISH */
+}
+.errorName{
+    padding-left: 8px;
+    padding-right:8px;
+    display:none;
+    margin-top: 60px;
+    position:absolute;
+}
+.errorName span{
+    color: rgb(244, 33, 46);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: chirpRegular;
+}
+.nameSInvalid{
+    border: 1px solid rgb(244, 33, 46) !important;
+    box-shadow: rgb(244, 33, 46) 0 0 0 1px !important;
+}
+.spanNameSInvalid{
+    color: rgb(244, 33, 46) !important;
+}
+/* NAME - FINISH */
 .emailS{  /* EMAIL - START */
     position: relative;
-    margin-top: 16px;
-    margin-bottom: 12px;
+    margin-top: 28px;
     border-radius: 4px;
     border: 1px solid rgb(51, 54, 57);
     display:flex;
@@ -241,7 +260,7 @@
     font-size: small;
     font-weight: 400;
     line-height: 16px;
-    color: rgb(29, 155, 240);
+    color: rgb(29, 155, 240) !important;
     transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .spanEmailSmod2{
@@ -289,12 +308,103 @@
 }
 .emailSInvalid{
     border: 1px solid rgb(244, 33, 46) !important;
-    box-shadow: none !important;
+    box-shadow: rgb(244, 33, 46) 0 0 0 1px !important;
 }
 .spanEmailSInvalid{
     color: rgb(244, 33, 46) !important;
 }
 /* EMAIL - FINISH */
+.passS{  /* PASS - START */
+    position: relative;
+    margin-top: 28px;
+    border-radius: 4px;
+    border: 1px solid rgb(51, 54, 57);
+    display:flex;
+}
+.passSmod{
+    box-shadow: rgb(29, 155, 240) 0 0 0 1px;
+    border-color: rgb(29, 155, 240);
+}
+.passHolderS{
+    position: absolute;
+    flex-direction: row;
+    display:flex;
+    height:100%;
+    width:100%;
+    user-select: none;
+}
+.spanPassS{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 16px;
+    font-family: chirpRegular;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(113, 118, 123);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanPassSmod{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(29, 155, 240) !important;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.spanPassSmod2{
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    font-family: chirpRegular;
+    font-size: small;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(113, 118, 123);
+    }
+.inputholderPassS{
+    position: relative;
+    margin-top:16px;
+    padding:12px 8px 8px 8px;
+    display:flex;
+    width:100%;
+}
+.inputholderPassS input{
+    border:none;
+    font-size:17px;
+    font-weight:400;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.00);
+    outline-style:none;
+    text-align: left;
+    font-family: ChirpRegular;
+    width:100%;
+    color: rgb(231, 233, 234);
+}
+.errorPass{
+    padding-left: 8px;
+    padding-right:8px;
+    display:none;
+    margin-top: 60px;
+    position:absolute;
+}
+.errorPass span{
+    color: rgb(244, 33, 46);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: chirpRegular;
+}
+.passSInvalid{
+    border: 1px solid rgb(244, 33, 46) !important;
+    box-shadow: rgb(244, 33, 46) 0 0 0 1px !important;
+}
+.spanPassSInvalid{
+    color: rgb(244, 33, 46) !important;
+} /* PASSWORD - FINISH */
 .bottomCont{   /* SPODNJI DEL - DATE*/
     display:flex;
     margin-top:24px;

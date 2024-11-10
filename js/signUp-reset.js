@@ -1,31 +1,44 @@
-const spanEmailSMod = document.querySelector(".spanEmailS");
-const errorMsg = document.querySelector('.errorMsg');
-const emailSInvalid = document.querySelector('.emailSInvalid');
 function refresh() {
+    // reset all inputs
     document.querySelectorAll("input").forEach(input => {
         input.value = "";
     });
 
 
+    // reset comboboxes - birth date selections
     document.querySelectorAll(".comboBoxes select").forEach(select => {
         select.selectedIndex = 0;
     });
 
-    document.querySelector(".nameS").classList.remove("nameSmod");
-    document.querySelector(".emailS").classList.remove("emailSmod");
 
+    // remove the modified small texts in inputs 
     document.querySelector(".spanNameS").classList.remove("spanNameSmod", "spanNameSmod2");
     document.querySelector(".spanEmailS").classList.remove("spanEmailSmod", "spanEmailSmod2");
+    document.querySelector(".spanPassS").classList.remove("spanPassSmod", "spanPassSmod2");
+    document.querySelector(".spanNameL").classList.remove("spanNameLmod", "spanNameLmod2");
 
-    errorMsg.style.display = 'none';
-    if(emailSInvalid){
-        emailSInvalid.classList.remove('emailSInvalid');
-    }
-    spanEmailSMod.classList.remove("spanEmailSInvalid");
+
+    // remove invalid email input styling
+    document.querySelector(".emailS").classList.remove('emailSInvalid');
+    document.querySelector(".spanEmailS").classList.remove("spanEmailSInvalid");
+    document.querySelector('.emailS .errorMsg').style.display = "none";
+
+
+    // remove invalid password input styling
+    document.querySelector(".passS").classList.remove('passSInvalid');
+    document.querySelector(".spanPassS").classList.remove("spanPassSInvalid");
+    document.querySelector('.errorPass').style.display = "none";
+
+
+    // remove invalid name input styling
+    document.querySelector(".nameS").classList.remove('nameSInvalid');
+    document.querySelector(".spanNameS").classList.remove("spanNameSInvalid");
+    document.querySelector('.errorName').style.display = "none";
+
+
+    // unable all the buttons
+    nextButton.disabled = true;
+    nextBtnLogin.disabled = true;
+
+
 }
-document.addEventListener("DOMContentLoaded", function () { // kadar zapres stran in ponovno odpres
-    if (sessionStorage.getItem("resetSignupFormOnLoad") !== "false") {
-        refresh();
-    }
-    sessionStorage.setItem("resetSignupFormOnLoad", "false");
-});

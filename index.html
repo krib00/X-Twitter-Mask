@@ -170,25 +170,43 @@
                 </div>
                 <div class="teloS">
                     <h1>Create your account</h1>
+
                     <div class="nameS" onclick="activeNameS(this)">
                         <div class="nameholderS">
                             <span class="spanNameS">Name</span>
                         </div>
                         <div class="inputholderS">
-                            <input id="inputName" type="text" required>
+                            <input id="inputName" maxlength="20" type="text" required>
+                        </div>
+                        <div class="errorName">
+                            <span>Name requires at least 3 letters.</span>
                         </div>
                     </div>
+
                     <div class="emailS" onclick="activeEmailS(this)">
                         <div class="emailHolderS">
                             <span class="spanEmailS">Email</span>
                         </div>
                         <div class="inputholderEmailS">
-                            <input id="inputEmail" type="text" required>
+                            <input id="inputEmail" maxlength="30" type="text" required>
                         </div>
                         <div class="errorMsg">
                             <span>Please enter a valid email.</span>
                         </div>
                     </div>
+
+                    <div class="passS" onclick="activePassS(this)">
+                        <div class="passHolderS">
+                            <span class="spanPassS">Password</span>
+                        </div>
+                        <div class="inputholderPassS">
+                            <input id="inputPass" maxlength="30" type="password" required>
+                        </div>
+                        <div class="errorPass">
+                            <span>Password requires at least 8 letters and 1 number!</span>
+                        </div>
+                    </div>
+
                     <div class="bottomCont">
                         <span class="spanPrvi">Date of birth</span>
                         <span class="spanDrugi">This will not be shown publicly. Confirm your own age, even if this
@@ -236,7 +254,7 @@
                             </div>
                             <div class="leto">
                                 <span class="letoSpan">Year</span>
-                                
+
                                 <select id="year">
                                     <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
                                     <script>
@@ -327,7 +345,7 @@
                     </div>
                     <div class="nameL" onclick="loginInputL(this)">
                         <div class="nameholderS">
-                            <span class="spanNameL">Phone, email, or username</span>
+                            <span class="spanNameL">Email address or username</span>
                         </div>
                         <div class="inputholderL">
                             <input id="inputNameL" type="text" required>
@@ -361,7 +379,8 @@
     <script src="js/login-input.js"></script>
     <script src="js/login-enableBtn.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
 
 </body>
+
 </html>

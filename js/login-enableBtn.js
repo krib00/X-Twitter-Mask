@@ -1,6 +1,5 @@
 const nextBtnLogin = document.querySelector(".nextBtnL");
 const inputNameL = document.getElementById("inputNameL");
-console.log(inputNameL);
 function activeButton() {
     const nameValue = inputNameL.value;
 
