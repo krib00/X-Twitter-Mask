@@ -201,6 +201,7 @@
     margin-left:4px;
     margin-right:4px;
 }
+/* NAME - START */
 .nameL{
     position: relative;
     margin-top: 12px;
@@ -272,6 +273,28 @@
     width:100%;
     color: rgb(231, 233, 234);
 } 
+.errorNameL{
+    padding-left: 8px;
+    padding-right:8px;
+    display:none;
+    margin-top: 60px;
+    position:absolute;
+}
+.errorNameL span{
+    color: rgb(244, 33, 46);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: chirpRegular;
+}
+.nameLInvalid{
+    border: 1px solid rgb(244, 33, 46) !important;
+    box-shadow: rgb(244, 33, 46) 0 0 0 1px !important;
+}
+.spanNameLInvalid{
+    color: rgb(244, 33, 46) !important;
+}
+/* NAME - END */
 .nextBtnL{
     background-color: rgb(239, 243, 244);
     border: 1px solid rgba(0, 0, 0, 0);

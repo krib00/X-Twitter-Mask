@@ -3,6 +3,8 @@ function loginInputL(element) {
 
     const input = element.querySelector("input");
     const spanNameLMod = element.querySelector(".spanNameL");
+    const errorNameL = element.querySelector(".errorNameL");
+    const nameRegex = /^[A-Za-z]{3,}$/;
 
     if (spanNameLMod) {
         spanNameLMod.classList.add("spanNameLmod");
@@ -10,8 +12,30 @@ function loginInputL(element) {
     }
 
     if (input) {
-        input.focus();
-    }
+        input.focus();  // fokus na input kadar kliknes na DIV
+
+        input.addEventListener('input', function () {
+            const nameValueL = input.value;
+
+            if (nameRegex.test(nameValueL)) {
+                errorNameL.style.display = 'none';
+                element.classList.remove('nameLInvalid');
+                spanNameLMod.classList.remove("spanNameLInvalid");
+               
+                
+            } else if (nameValueL.length > 0) {
+                errorNameL.style.display = 'block';
+                element.classList.add('nameLInvalid');
+                spanNameLMod.classList.add("spanNameLInvalid");
+                
+            } else {
+                errorNameL.style.display = 'none';
+                element.classList.remove('nameLInvalid');
+                spanNameLMod.classList.remove("spanNameLInvalid");
+
+            }
+        });
+    } 
 
     function handleClickOutside(event) {
         if (!element.contains(event.target)) {

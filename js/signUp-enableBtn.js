@@ -6,9 +6,9 @@ const day = document.getElementById("day");
 const month = document.getElementById("month");
 const year = document.getElementById("year");
 
-function validateName(email) {
+function validateName(name) {
     const nameRegex = /^[A-Za-z]{3,}$/;
-    return nameRegex.test(email);
+    return nameRegex.test(name);
 }
 
 function validateEmail(email) {
