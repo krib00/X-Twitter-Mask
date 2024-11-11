@@ -1,18 +1,18 @@
 @font-face {
     font-family: xfont;
-    src: url("..\\fonts\\xfont.woff2") format("woff2");
+    src: url("../fonts/xfont.woff2") format("woff2");
 }
 @font-face {
     font-family: xfontMini;
-    src: url("..\\fonts\\xFontMini.woff2") format("woff2");
+    src: url("../fonts/xFontMini.woff2") format("woff2");
 }
 @font-face{
     font-family: chirpRegular;
-    src: url("..\\fonts\\chirpRegular.woff2") format("woff2");
+    src: url("../fonts/chirpRegular.woff2") format("woff2");
 }
 @font-face{
     font-family:ChirpBold;
-    src: url("..\\fonts\\ChirpBold.woff2") format("woff2");
+    src: url("../fonts/ChirpBold.woff2") format("woff2");
 }
 *{
     margin:0;
