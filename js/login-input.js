@@ -69,7 +69,7 @@ function activePassL(element) {
     const spanPassLMod = element.querySelector(".spanPassL");
     const errorPassL = document.querySelector(".errorPassL");
 
-    const passRegexL = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)[A-Za-z\d]+$/ ; // regex za vsaj 8 črk in 1 številko
+    const passRegexL = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
 
     if (spanPassLMod) {
         spanPassLMod.classList.add("spanPassLmod");

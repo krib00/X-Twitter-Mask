@@ -135,7 +135,7 @@ function activePassS(element) {
     const spanPassSMod = element.querySelector(".spanPassS");
     const errorPass = document.querySelector(".errorPass");
 
-    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)[A-Za-z\d]+$/ ; // regex za vsaj 8 črk in 1 številko
+    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
 
     if (spanPassSMod) {
         spanPassSMod.classList.add("spanPassSmod");

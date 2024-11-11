@@ -8,7 +8,7 @@ function validateNameL(nameL) {
 }
 
 function validatePassL(passL) {
-    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)[A-Za-z\d]+$/;
+    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
     return passRegex.test(passL);
 }
 

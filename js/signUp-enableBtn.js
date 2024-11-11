@@ -16,7 +16,7 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 function validatePass(pass) {
-    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)[A-Za-z\d]+$/;
+    const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
     return passRegex.test(pass);
 }
 const check = () => {
