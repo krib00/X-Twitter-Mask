@@ -41,6 +41,11 @@ function refresh() {
     document.querySelector(".spanNameL").classList.remove("spanNameLInvalid");
     document.querySelector('.errorNameL').style.display = "none";
 
+    // remove invalid pass input styling - LOGIN FORM
+    document.querySelector(".passL").classList.remove('passLInvalid');
+    document.querySelector(".spanPassL").classList.remove("spanPassLInvalid");
+    document.querySelector(".spanPassL").classList.remove("spanPassLmod2");
+    document.querySelector('.errorPassL').style.display = "none";
 
     // unable all the buttons
     nextButton.disabled = true;

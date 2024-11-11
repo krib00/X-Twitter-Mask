@@ -60,3 +60,69 @@ function loginInputL(element) {
         document.addEventListener("click", handleClickOutside);
     }, 0);
 }
+
+// PASS
+
+function activePassL(element) {
+    element.classList.add("passLmod");
+    const input = element.querySelector("input");
+    const spanPassLMod = element.querySelector(".spanPassL");
+    const errorPassL = document.querySelector(".errorPassL");
+
+    const passRegexL = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)[A-Za-z\d]+$/ ; // regex za vsaj 8 črk in 1 številko
+
+    if (spanPassLMod) {
+        spanPassLMod.classList.add("spanPassLmod");
+        spanPassLMod.classList.remove("spanPassL");
+    }
+
+    if (input) {
+        input.focus(); 
+
+        input.addEventListener('input', function () {
+            const passValueL = input.value;
+
+            if (passRegexL.test(passValueL)) {
+                errorPassL.style.display = 'none';
+                element.classList.remove('passLInvalid');
+                spanPassLMod.classList.remove("spanPassLInvalid");
+               
+                
+            } else if (passValueL.length > 0) {
+                errorPassL.style.display = 'block';
+                element.classList.add('passLInvalid');
+                spanPassLMod.classList.add("spanPassLInvalid");
+                
+            } else {
+                errorPassL.style.display = 'none';
+                element.classList.remove('passLInvalid');
+                spanPassLMod.classList.remove("spanPassLInvalid");
+
+            }
+        });
+    } 
+
+    function handleClickOutside(event) { // preveri ce kliknes izven diva
+        if (!element.contains(event.target)) { 
+            element.classList.remove("passLmod");
+
+            if (spanPassLMod) {
+                spanPassLMod.classList.remove("spanPassLmod");
+                spanPassLMod.classList.add("spanPassL");
+
+                // doda spanPassLmod2 samo takrat, ko input ni prazen in div je nefokusiran
+                if (input.value.length > 0) {
+                    spanPassLMod.classList.add("spanPassLmod2");
+                } else {
+                    spanPassLMod.classList.remove("spanPassLmod2");
+                }
+            }
+
+            document.body.focus();
+            document.removeEventListener("click", handleClickOutside);
+        }
+    }
+    setTimeout(() => {
+        document.addEventListener("click", handleClickOutside);
+    }, 0);
+}

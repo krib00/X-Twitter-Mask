@@ -325,21 +325,29 @@
 
                     <div class="nameL" onclick="loginInputL(this)">
                         <div class="nameholderS">
-                            <span class="spanNameL">Email address or username</span>
+                            <span class="spanNameL">Username</span>
                         </div>
                         <div class="inputholderL">
-                            <input id="inputNameL" type="text" required>
+                            <input id="inputNameL" maxlength="20" type="text" required>
                         </div>
                         <div class="errorNameL">
                             <span>Name requires at least 3 letters.</span>
                         </div>
                     </div>
+                    <div class="passL" onclick="activePassL(this)">
+                        <div class="passHolderL">
+                            <span class="spanPassL">Password</span>
+                        </div>
+                        <div class="inputholderPassL">
+                            <input id="inputPassL" maxlength="30" type="password" required>
+                        </div>
+                        <div class="errorPassL">
+                            <span>Password requires at least 8 letters and 1 number!</span>
+                        </div>
+                    </div>
 
                     <button class="nextBtnL" onclick="successLogin()" disabled>
                         <span>Next</span>
-                    </button>
-                    <button class="passL">
-                        <span>Forgot password?</span>
                     </button>
                     <div class="bottomTxt">
                         <span>Don't have an account?</span>
