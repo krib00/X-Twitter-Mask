@@ -216,15 +216,6 @@
                                 <span class="mesecSpan">Month</span>
                                 <select id="month">
                                     <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
-                                    <script>
-                                        const months = [
-                                            "January", "February", "March", "April", "May", "June",
-                                            "July", "August", "September", "October", "November", "December"
-                                        ];
-                                        months.forEach((month, index) => {
-                                            document.write(`<option value="${index + 1}">${month}</option>`);
-                                        });
-                                    </script>
                                 </select>
                                 <svg class="mesecSvg" viewBox="0 0 24 24">
                                     <g>
@@ -238,11 +229,6 @@
                                 <span class="danSpan">Day</span>
                                 <select id="day">
                                     <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
-                                    <script>
-                                        for (let i = 1; i <= 31; i++) {
-                                            document.write(`<option value="${i}">${i}</option>`);
-                                        }
-                                    </script>
                                 </select>
                                 <svg class="danSvg" viewBox="0 0 24 24">
                                     <g>
@@ -254,15 +240,8 @@
                             </div>
                             <div class="leto">
                                 <span class="letoSpan">Year</span>
-
                                 <select id="year">
                                     <option style="background-color: rgb(170, 170, 170)" disabled selected></option>
-                                    <script>
-                                        const currentYear = new Date().getFullYear();
-                                        for (let i = currentYear; i >= 1904; i--) {
-                                            document.write(`<option value="${i}">${i}</option>`);
-                                        }
-                                    </script>
                                 </select>
                                 <svg class="letoSvg" viewBox="0 0 24 24">
                                     <g>
@@ -383,6 +362,7 @@
     <script src="js/signUp-checkbox.js"></script>
     <script src="js/login-input.js"></script>
     <script src="js/login-enableBtn.js"></script>
+    <script src="js/signUp-dateMod.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>

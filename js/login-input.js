@@ -4,7 +4,7 @@ function loginInputL(element) {
     const input = element.querySelector("input");
     const spanNameLMod = element.querySelector(".spanNameL");
     const errorNameL = element.querySelector(".errorNameL");
-    const nameRegex = /^[A-Za-z]{3,}$/;
+    const nameRegex = /(?=(.*[a-zA-Z]){3,}).*/;
 
     if (spanNameLMod) {
         spanNameLMod.classList.add("spanNameLmod");

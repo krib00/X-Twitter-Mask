@@ -2,7 +2,7 @@ const nextBtnLogin = document.querySelector(".nextBtnL");
 const inputNameL = document.getElementById("inputNameL");
 
 function validateNameL(nameL) {
-    const nameRegex = /^[A-Za-z]{3,}$/;
+    const nameRegex = /(?=(.*[a-zA-Z]){3,}).*/;
     return nameRegex.test(nameL);
 }
 
