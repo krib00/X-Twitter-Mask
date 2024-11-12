@@ -192,3 +192,8 @@ function activePassS(element) {
         document.addEventListener("click", handleClickOutside);
     }, 0);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+   activeEmailS(".emailS");
+});
