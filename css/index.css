@@ -1,9 +1,9 @@
 @font-face {
-    font-family: xfont;
+    font-family: xFont;
     src: url("../fonts/xfont.woff2") format("woff2");
 }
 @font-face {
-    font-family: xfontMini;
+    font-family: xFontMini;
     src: url("../fonts/xFontMini.woff2") format("woff2");
 }
 @font-face{
