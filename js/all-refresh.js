@@ -41,15 +41,31 @@ function refresh() {
     document.querySelector(".spanNameL").classList.remove("spanNameLInvalid");
     document.querySelector('.errorNameL').style.display = "none";
 
+
     // remove invalid pass input styling - LOGIN FORM
     document.querySelector(".passL").classList.remove('passLInvalid');
     document.querySelector(".spanPassL").classList.remove("spanPassLInvalid");
     document.querySelector(".spanPassL").classList.remove("spanPassLmod2");
     document.querySelector('.errorPassL').style.display = "none";
 
+
     // unable all the buttons
     nextButton.disabled = true;
     nextBtnLogin.disabled = true;
 
+    // ----- telo V2 ------
+    // reset checkboxes 
+    document.querySelector(".cont1 div svg").style.display = "none";
+    document.querySelector(".cont2 div svg").style.display = "none";
+    document.querySelector(".cont3 div svg").style.display = "none";
+
+
+    // reset - SIGNUP
+    document.querySelector('.nazaj').style.display = "none";
+    document.querySelector('.zapri').style.display = "flex";
+    document.querySelector('.finish').style.display = "none";
+    document.querySelector('.naprej').style.display = "block";
+    document.querySelector('.teloV2').style.display = "none";
+    document.querySelector('.teloS').style.display = "flex";
 
 }

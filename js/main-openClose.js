@@ -51,3 +51,19 @@ function dontHaveAnAccount() {
     animationS.classList.add("showS");
     animationS.classList.remove("hideS");
 }
+function naprej(){
+    document.querySelector('.nazaj').style.display = "flex";
+    document.querySelector('.zapri').style.display = "none";
+    document.querySelector('.finish').style.display = "block";
+    document.querySelector('.naprej').style.display = "none";
+    document.querySelector('.teloV2').style.display = "flex";
+    document.querySelector('.teloS').style.display = "none";
+}
+function nazaj(){
+    document.querySelector('.nazaj').style.display = "none";
+    document.querySelector('.zapri').style.display = "flex";
+    document.querySelector('.finish').style.display = "none";
+    document.querySelector('.naprej').style.display = "block";
+    document.querySelector('.teloV2').style.display = "none";
+    document.querySelector('.teloS').style.display = "flex";
+}

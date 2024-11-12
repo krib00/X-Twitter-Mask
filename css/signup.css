@@ -57,14 +57,14 @@
     }
 }
 .glavaS{
-    height:53px;
+    min-height: 53px;
     width:100%;
     display:flex;
     padding-left:16px;
     padding-right:16px;
     align-items: center;
 }
-.glavaS button{
+.zapri{
     min-width: 36px;
     height:36px;
     border:none;
@@ -74,13 +74,14 @@
     display:flex;      
     margin-left: calc(-8px); 
     align-items: center;
+    position:relative;
 }
-.glavaS button:hover{
+.zapri:hover{
     cursor:pointer;
     transition-duration: 0.2s;  
     background-color: rgba(239, 243, 244, 0.1);
 }
-.glavaS button svg {
+.zapri svg {
     fill:rgb(239, 243, 244);
     height:20px;
     width:20px; 
@@ -544,4 +545,10 @@
     font-size: 17px;
     color: rgb(15, 20, 25);
     font-family: ChirpBold;
+}
+.naprej{
+    display:block;
+}
+.finish{
+    display:none;
 }

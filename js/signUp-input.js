@@ -193,7 +193,3 @@ function activePassS(element) {
     }, 0);
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {
-   activeEmailS(".emailS");
-});

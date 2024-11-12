@@ -1,4 +1,4 @@
-document.getElementById('nextBtn').addEventListener('click', function () {
+document.getElementById('finish').addEventListener('click', function () {
     swal("Congrats!", "You have successfully created an account!", "success").then(() => {
         nextButton.disabled = true;
         closeSignup();

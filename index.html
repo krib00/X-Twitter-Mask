@@ -5,6 +5,7 @@
     <title>X Replika</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/signupPage2.css">
     <link rel="stylesheet" href="css/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -147,11 +148,20 @@
             <div class="glavniS">
                 <div class="glavaS">
                     <div class="barrierS_L">
-                        <button onclick="closeSignup()">
+                        <button class="zapri" onclick="closeSignup()">
                             <svg viewBox="0 0 24 24">
                                 <g>
                                     <path
                                         d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="nazaj" onclick="nazaj()">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path
+                                        d="M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z">
                                     </path>
                                 </g>
                             </svg>
@@ -176,7 +186,7 @@
                             <span class="spanNameS">Name</span>
                         </div>
                         <div class="inputholderS">
-                            <input id="inputName" maxlength="20" type="text" required autocomplete="given-name">
+                            <input id="inputName" maxlength="20" type="text" required>
                         </div>
                         <div class="errorName">
                             <span>Name requires at least 3 letters.</span>
@@ -188,7 +198,7 @@
                             <span class="spanEmailS">Email</span>
                         </div>
                         <div class="inputholderEmailS">
-                            <input id="inputEmail" maxlength="30" type="text" required autocomplete="email">
+                            <input id="inputEmail" maxlength="30" type="text" required>
                         </div>
                         <div class="errorMsg">
                             <span>Please enter a valid email.</span>
@@ -254,9 +264,71 @@
                         </div>
                     </div>
                 </div>
+                <div class="teloV2">
+                    <h1>Customize your experience</h1>
+                    <div class="check1">
+                        <h2>Get more out of X</h2>
+                        <div class="cont1">
+                            <span>Receive email about your X activity and recommendations.</span>
+                            <div>
+                                <input type="checkbox">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check2">
+                        <h2>Connect with people you know</h2>
+                        <div class="cont2">
+                            <span>Let others find your X account by your email address.</span>
+                            <div>
+                                <input type="checkbox">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check3">
+                        <h2>Personalized ads</h2>
+                        <div class="cont3">
+                            <span>You will always see ads on X based on your X activity. When this setting is enabled, X
+                                may further personalize ads from X advertisers, on and off X, by combining your X
+                                activity with other online activity and information from our partners.</span>
+                            <div>
+                                <input type="checkbox">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomSignUpV2">
+                        <span>By signing up, you agree to our</span>
+                        <a href="https://twitter.com/tos#new" target="_blank" role="link">Terms</a><span>,</span>
+                        <a href="https://twitter.com/privacy" target="_blank" role="link">Privacy Policy</a><span>,
+                            and</span>
+                        <a href="https://support.twitter.com/articles/20170514" target="_blank" role="link">Cookie
+                            Use</a><span>. X may use your contact information, including your email address and phone
+                            number for purposes
+                            outlined in our Privacy Policy.</span>
+                        <a href="https://twitter.com/privacy" target="_blank" role="link">Learn more</a>
+                    </div>
+
+                </div>
                 <div class="nogaS">
-                    <button id="nextBtn" disabled>
+                    <button class="naprej" id="nextBtn" onclick="naprej()" disabled>
                         <span>Next</span>
+                    </button>
+                    <button class="finish" id="finish">
+                        <span>Finish</span>
                     </button>
                 </div>
             </div>
@@ -368,6 +440,7 @@
     <script src="js/signUp-enableBtn.js"></script>
     <script src="js/signUp-sweet.js"></script>
     <script src="js/signUp-checkbox.js"></script>
+    <script src="js/signUp-activeBox.js"></script>
     <script src="js/login-input.js"></script>
     <script src="js/login-enableBtn.js"></script>
     <script src="js/signUp-dateMod.js"></script>
