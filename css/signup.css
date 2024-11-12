@@ -12,11 +12,8 @@
 }
 .glavniS { 
     border: none;
-    height:0;
-    width:0; 
     min-width:600px;  
     min-height:400px;
-    height:650px;  
     max-height:90vh;
     max-width:80vw;
     flex-shrink:1;

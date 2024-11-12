@@ -285,3 +285,67 @@ h2{
 .swal-button:hover {
     background-color: rgb(34, 90, 128) !important;
 }
+@media (max-width:705px) {
+    .glavniS{
+        min-height:100% !important;
+        min-width:100% !important;
+        border-radius:0 !important;
+        overflow: hidden !important;
+    }
+    .teloS{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+        position: relative;
+        max-width:100% !important;
+    }
+    .teloS h1{
+        font-size:26px !important;
+        line-height: 32px !important;
+    }
+    .nogaS{
+        padding: 0 32px 0 32px !important;
+    }
+    .glavniL{
+        min-height:100% !important;
+        min-width:100% !important;
+        border-radius:0 !important;
+        margin:auto !important;
+        overflow-y:scroll !important;
+        display:flex;
+    }
+    .teloL{
+        margin:auto;
+    }
+    .teloL h1{
+        font-size: 26px !important;
+        line-height: 32px !important;
+    }
+}
+@media(max-width:515px){
+    .glava{
+        display:block;
+    }
+    h1{
+        line-height: 52px;
+        letter-spacing: -0.8px;
+        font-size: 40px;
+        font-weight: 700;
+        min-width: 0;
+        margin-bottom:40px;
+        margin-top:40px;
+        color:#e7e9ea;
+        word-wrap:break-word;
+        width:auto;
+    }
+    h2{
+        line-height: 28px;
+        font-size:23px;
+        margin-bottom:20px;
+    }
+    .terms{
+        margin-bottom: 16px;
+    }
+    .skatlaRacun span{
+        margin-bottom:16px;
+    }
+}
