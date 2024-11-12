@@ -1,9 +1,9 @@
-document.getElementById('finish').addEventListener('click', function () {
+function successSignup() {
     swal("Congrats!", "You have successfully created an account!", "success").then(() => {
         nextButton.disabled = true;
         closeSignup();
     });
-});
+};
 
 function successLogin() {
     swal("Congrats!", "You have successfully logged into your account!", "success").then(() => {
