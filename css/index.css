@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: xFont;
     src: url("..\\fonts\\xFont.woff2") format("woff2");
@@ -89,6 +90,7 @@ html, body, .glavni{
     align-self:flex-start;
     fill:currentColor;
     color: rgba(231, 233, 234, 1.00);
+    display:none;
 }
 h1{
     font-family: xFont;
@@ -281,9 +283,24 @@ h2{
     background-color: rgb(29, 155, 240) !important;
     outline-style:none;
     border:none;
+    appearance: none;
 }
 .swal-button:hover {
-    background-color: rgb(34, 90, 128) !important;
+    background-color: rgb(29, 155, 240) !important;
+}
+.swal-title{
+    font-family: ChirpBold;
+    user-select: none;
+}
+.swal-text{
+    font-family: chirpRegular;
+    user-select: none;
+}
+.swal-icon--success__ring{
+    border-color: rgb(115, 163, 196) !important;
+}
+.swal-icon--success__line{
+    background-color:rgb(29, 155, 240) !important;
 }
 @media (max-width:705px) {
     .glavniS{
