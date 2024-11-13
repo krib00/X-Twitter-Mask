@@ -310,7 +310,6 @@ h2{
         min-width:100% !important;
         border-radius:0 !important;
         margin:auto !important;
-        overflow-y:scroll !important;
         display:flex;
     }
     .teloL{

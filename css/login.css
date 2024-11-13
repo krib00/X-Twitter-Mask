@@ -22,9 +22,11 @@
     overflow-y: hidden;
     border-radius:16px;
     background-color: black;
+    overflow: auto;
+    
 }
 .showL{
-    animation: loginShow 0.5s ease;
+    animation: loginShow 0.3s ease;
 }
 .hideL{
     animation: loginHide 0.3s ease;
@@ -33,9 +35,6 @@
     0% {
         transform: scale(0);
         opacity: 0;
-    }
-    50%{
-        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -53,7 +52,7 @@
     }
 }
 .glavaL{
-    height:53px;
+    min-height:53px;
     width:100%;
     display:flex;
     padding-left:16px;
@@ -134,7 +133,7 @@
     flex-direction: column;
 }
 .googleLogin, .appleLogin{
-    height:40px;
+    min-height:40px;
     width:300px;
     max-width:380px;
     border:1px solid;
