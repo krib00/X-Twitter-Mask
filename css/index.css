@@ -291,16 +291,26 @@ h2{
 .swal-title{
     font-family: ChirpBold;
     user-select: none;
+    color: rgb(231, 233, 234);
 }
 .swal-text{
     font-family: chirpRegular;
     user-select: none;
+    color: rgb(231, 233, 234);
+}
+.swal-modal{
+    background-color: rgb(6, 9, 12);
+    border-color: rgb(115, 163, 196) !important;
+    border:1px solid;
+}
+.swal-icon::before, .swal-icon::after, .swal-icon--success__hide-corners{
+    background-color: rgb(6, 9, 12);
 }
 .swal-icon--success__ring{
     border-color: rgb(115, 163, 196) !important;
 }
 .swal-icon--success__line{
-    background-color:rgb(29, 155, 240) !important;
+    background-color:rgb(29, 155, 240) !important; 
 }
 @media (max-width:705px) {
     .glavniS{
