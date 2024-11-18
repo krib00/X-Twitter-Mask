@@ -24,7 +24,7 @@ const check = () => {
     const emailValue = inputEmail.value;
     const passValue = inputPass.value;
 
-    if (nameValue !== "" && emailValue !== "" && day.value !== "" && month.value !== "" && year.value !== "" && validateEmail(emailValue) && validatePass(passValue) && validateName(nameValue)) {
+    if (nameValue !== "" && emailValue !== "" && day.value !== "" && month.value !== "" && year.value !== ""&& validateEmail(emailValue) && validatePass(passValue) && validateName(nameValue)) {
         nextButton.disabled = false;  // enable
     } else {
         nextButton.disabled = true; 
