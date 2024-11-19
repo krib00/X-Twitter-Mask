@@ -8,4 +8,6 @@ Forms are custom offering transitions with register/login credentials.
 
 Page is labelled as "dangerous site" on google chrome or firefox due to similarity of original website (Twitter). 
 
-To avoid the message you can open it on other browsers (ex. Edge, Brave...), or you can click on "details" and then "this unsafe site".
+To avoid the message you can open it on other browsers (ex. Edge, Brave...), 
+
+or you can bypass it by clicking on "details" and then "this unsafe site".
