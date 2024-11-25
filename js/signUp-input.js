@@ -1,195 +1,162 @@
 // NAME
-
-function activeNameS(element) {
-    element.classList.add("nameSmod");
-
-    const input = element.querySelector("input");
-    const spanNameSMod = element.querySelector(".spanNameS");
-    const errorName = element.querySelector(".errorName");
+document.querySelector(".nameS").addEventListener("click", activeNameS);
+document.querySelector(".nameS").addEventListener("focusin", activeNameS);
+function activeNameS() {
+    const nameS = document.querySelector(".nameS");
+    const input = nameS.querySelector("input");
+    const spanNameSMod = document.querySelector(".spanNameS");
+    const errorName = document.querySelector(".errorName");
     const nameRegex = /^[A-Za-z]{3,}$/;
-    if (spanNameSMod) {
-        spanNameSMod.classList.add("spanNameSmod");
-        spanNameSMod.classList.remove("spanNameS");
-    }
 
-    if (input) {
-        input.focus();  // fokus na input kadar kliknes na DIV
+    // obarva border v modro
+    nameS.classList.add("nameSmod");
+    // obarva ime v modro
+    spanNameSMod.classList.add("spanNameSmod");
 
-        input.addEventListener('input', function () {
-            const nameValue = input.value;
+    // fokus na input kadar kliknes na DIV
+    input.focus();
+    input.addEventListener('input', function () {
+        const nameValue = input.value;
 
-            if (nameRegex.test(nameValue)) {
-                errorName.style.display = 'none';
-                element.classList.remove('nameSInvalid');
-                spanNameSMod.classList.remove("spanNameSInvalid");
-               
-                
-            } else if (nameValue.length > 0) {
-                errorName.style.display = 'block';
-                element.classList.add('nameSInvalid');
-                spanNameSMod.classList.add("spanNameSInvalid");
-                
+        if (nameRegex.test(nameValue)) { // ce ime uposteva pogoje... ni errorjev
+            errorName.style.display = 'none';
+            nameS.classList.remove('nameSInvalid');
+            spanNameSMod.classList.remove("spanNameSInvalid");
+
+        } else if (nameValue.length > 0) { // ce je ime vneseno, in ne uposteva pogojev.... ERROR!
+            errorName.style.display = 'block';
+            nameS.classList.add('nameSInvalid');
+            spanNameSMod.classList.add("spanNameSInvalid");
+
+        } else { // ce je input prazen... ni errorjev
+            errorName.style.display = 'none';
+            nameS.classList.remove('nameSInvalid');
+            spanNameSMod.classList.remove("spanNameSInvalid");
+        }
+    });
+
+    function handleClickOutside(event) {    // preveri ce kliknes izven diva
+        if (!nameS.contains(event.target)) {
+            nameS.classList.remove("nameSmod");
+
+            spanNameSMod.classList.remove("spanNameSmod");
+            spanNameSMod.classList.add("spanNameS");
+
+            // doda spanNameSmod2 samo takrat, ko input ni prazen in div je nefokusiran
+            if (input.value.length > 0) {
+                spanNameSMod.classList.add("spanNameSmod2");
             } else {
-                errorName.style.display = 'none';
-                element.classList.remove('nameSInvalid');
-                spanNameSMod.classList.remove("spanNameSInvalid");
-
+                spanNameSMod.classList.remove("spanNameSmod2");
             }
-        });
-    } 
-
-    // Listen for clicks outside the div
-    function handleClickOutside(event) {
-        if (!element.contains(event.target)) { // preveri ce kliknes izven diva
-            element.classList.remove("nameSmod");
-
-            if (spanNameSMod) {
-                spanNameSMod.classList.remove("spanNameSmod");
-                spanNameSMod.classList.add("spanNameS");
-
-                // doda spanNameSmod2 samo takrat, ko input ni prazen in div je nefokusiran
-                if (input.value.length > 0) {
-                    spanNameSMod.classList.add("spanNameSmod2");
-                } else {
-                    spanNameSMod.classList.remove("spanNameSmod2");
-                }
-            }
-
             document.body.focus();
-            document.removeEventListener("click", handleClickOutside);
         }
     }
-    setTimeout(() => {
-        document.addEventListener("click", handleClickOutside);
-    }, 0);
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("focusin", handleClickOutside);
 }
 
 // EMAIL
-function activeEmailS(element) {
-    element.classList.add("emailSmod");
-    const input = element.querySelector("input");
-    const spanEmailSMod = element.querySelector(".spanEmailS");
-    const errorMsg = element.querySelector('.errorMsg');
+document.querySelector(".emailS").addEventListener("click", activeEmailS);
+document.querySelector(".emailS").addEventListener("focusin", activeEmailS);
+function activeEmailS() {
+    const emailS = document.querySelector(".emailS");
+    const input = emailS.querySelector("input");
+    const spanEmailSMod = document.querySelector(".spanEmailS");
+    const errorMsg = document.querySelector('.errorMsg');
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (spanEmailSMod) {
-        spanEmailSMod.classList.add("spanEmailSmod");
-        spanEmailSMod.classList.remove("spanEmailS");
-    }
+    // obarva border v modro
+    emailS.classList.add("emailSmod");
+    // obarva email ime v modro
+    spanEmailSMod.classList.add("spanEmailSmod");
 
-    if (input) {
-        input.focus();
+    input.focus();
+    input.addEventListener('input', function () {
+        const emailValue = input.value;
+        if (emailRegex.test(emailValue)) {
+            errorMsg.style.display = 'none';
+            emailS.classList.remove('emailSInvalid');
+            spanEmailSMod.classList.remove("spanEmailSInvalid");
 
-        input.addEventListener('input', function () {
-            const emailValue = input.value;
+        } else if (emailValue.length > 0) {
+            errorMsg.style.display = 'block';
+            emailS.classList.add('emailSInvalid');
+            spanEmailSMod.classList.add("spanEmailSInvalid");
 
-            if (emailRegex.test(emailValue)) {
-                errorMsg.style.display = 'none';
-                element.classList.remove('emailSInvalid');
-                spanEmailSMod.classList.remove("spanEmailSInvalid");
-               
-                
-            } else if (emailValue.length > 0) {
-                errorMsg.style.display = 'block';
-                element.classList.add('emailSInvalid');
-                spanEmailSMod.classList.add("spanEmailSInvalid");
-                
-            } else {
-                errorMsg.style.display = 'none';
-                element.classList.remove('emailSInvalid');
-                spanEmailSMod.classList.remove("spanEmailSInvalid");
-
-            }
-        });
-    }
-
+        } else {
+            errorMsg.style.display = 'none';
+            emailS.classList.remove('emailSInvalid');
+            spanEmailSMod.classList.remove("spanEmailSInvalid");
+        }
+    });
     function handleClickOutside(event) {
-        if (!element.contains(event.target)) {
-            element.classList.remove("emailSmod");
+        if (!emailS.contains(event.target)) {
 
-            if (spanEmailSMod) {
-                spanEmailSMod.classList.remove("spanEmailSmod");
-                spanEmailSMod.classList.add("spanEmailS");
-                if (input.value.length > 0) {
-                    spanEmailSMod.classList.add("spanEmailSmod2");
-                } else {
-                    spanEmailSMod.classList.remove("spanEmailSmod2");
-                }
+            emailS.classList.remove("emailSmod");
+            spanEmailSMod.classList.remove("spanEmailSmod");
+            spanEmailSMod.classList.add("spanEmailS");
+
+            if (input.value.length > 0) {
+                spanEmailSMod.classList.add("spanEmailSmod2");
+            } else {
+                spanEmailSMod.classList.remove("spanEmailSmod2");
             }
-
-            document.removeEventListener("click", handleClickOutside);
         }
     }
-
-    setTimeout(() => {
-        document.addEventListener("click", handleClickOutside);
-    }, 0);
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("focusin", handleClickOutside);
 }
 
 // PASS
-
-
-function activePassS(element) {
-    element.classList.add("passSmod");
-    const input = element.querySelector("input");
-    const spanPassSMod = element.querySelector(".spanPassS");
+document.querySelector(".passS").addEventListener("click", activePassS);
+document.querySelector(".passS").addEventListener("focusin", activePassS);
+function activePassS() {
+    const passS = document.querySelector(".passS");
+    const input = passS.querySelector("input");
+    const spanPassSMod = document.querySelector(".spanPassS");
     const errorPass = document.querySelector(".errorPass");
-
     const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
 
-    if (spanPassSMod) {
-        spanPassSMod.classList.add("spanPassSmod");
-        spanPassSMod.classList.remove("spanPassS");
-    }
+    // obarva border v modro
+    passS.classList.add("passSmod");
+    // obarva email ime v modro
+    spanPassSMod.classList.add("spanPassSmod");
 
-    if (input) {
-        input.focus(); 
+    input.focus();
 
-        input.addEventListener('input', function () {
-            const passValue = input.value;
+    input.addEventListener('input', function () {
+        const passValue = input.value;
 
-            if (passRegex.test(passValue)) {
-                errorPass.style.display = 'none';
-                element.classList.remove('passSInvalid');
-                spanPassSMod.classList.remove("spanPassSInvalid");
-               
-                
-            } else if (passValue.length > 0) {
-                errorPass.style.display = 'block';
-                element.classList.add('passSInvalid');
-                spanPassSMod.classList.add("spanPassSInvalid");
-                
-            } else {
-                errorPass.style.display = 'none';
-                element.classList.remove('passSInvalid');
-                spanPassSMod.classList.remove("spanPassSInvalid");
+        if (passRegex.test(passValue)) {
+            errorPass.style.display = 'none';
+            passS.classList.remove('passSInvalid');
+            spanPassSMod.classList.remove("spanPassSInvalid");
 
-            }
-        });
-    } 
+        } else if (passValue.length > 0) {
+            errorPass.style.display = 'block';
+            passS.classList.add('passSInvalid');
+            spanPassSMod.classList.add("spanPassSInvalid");
 
+        } else {
+            errorPass.style.display = 'none';
+            passS.classList.remove('passSInvalid');
+            spanPassSMod.classList.remove("spanPassSInvalid");
+        }
+    });
     function handleClickOutside(event) { // preveri ce kliknes izven diva
-        if (!element.contains(event.target)) { 
-            element.classList.remove("passSmod");
+        if (!passS.contains(event.target)) {
+            passS.classList.remove("passSmod");
+            spanPassSMod.classList.remove("spanPassSmod");
+            spanPassSMod.classList.add("spanPassS");
 
-            if (spanPassSMod) {
-                spanPassSMod.classList.remove("spanPassSmod");
-                spanPassSMod.classList.add("spanPassS");
-
-                // doda spanNameSmod2 samo takrat, ko input ni prazen in div je nefokusiran
-                if (input.value.length > 0) {
-                    spanPassSMod.classList.add("spanPassSmod2");
-                } else {
-                    spanPassSMod.classList.remove("spanPassSmod2");
-                }
+            // doda spanNameSmod2 samo takrat, ko input ni prazen in div je nefokusiran
+            if (input.value.length > 0) {
+                spanPassSMod.classList.add("spanPassSmod2");
+            } else {
+                spanPassSMod.classList.remove("spanPassSmod2");
             }
-
-            document.body.focus();
-            document.removeEventListener("click", handleClickOutside);
         }
     }
-    setTimeout(() => {
-        document.addEventListener("click", handleClickOutside);
-    }, 0);
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("focusin", handleClickOutside);
 }
-

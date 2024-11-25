@@ -406,6 +406,9 @@
     margin-top:24px;
     flex-direction: column;
 }
+option:disabled{
+    background-color: rgb(170, 170, 170);
+}
 .spanPrvi{
     font-family: ChirpBold;
     margin-bottom: 8px;
